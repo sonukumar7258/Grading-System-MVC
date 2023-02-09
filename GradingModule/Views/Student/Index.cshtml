@@ -1,0 +1,24 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Student View</h1>
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Select Options to Get required Data</h2>
+			<hr />
+		</div>
+	<a asp-controller="Student" asp-action="FindCategoriesList" class="btn btn-secondary" style="width:150px">
+			Get Categories
+		</a>
+		<br />
+		<br />
+		<br />	
+	<a asp-controller="Student" asp-action="generateTranscipt" class="btn btn-secondary" style="width:150px">
+		Show Transcript
+	</a>
+	</div>
+<div>
+	<a asp-action="Create">Back to List</a>
+</div>

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Marks>
+@{
+    ViewData["Title"] = "generateTranscipt";
+}
+
+<h1>Transcipt</h1>
+
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Student ID
+            </th>
+            <th>
+                Course ID
+            </th>
+            <th>
+                Marks
+            </th>
+            <th>
+                Semester
+            </th>
+            <th>
+                Grade
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width="50%">
+                    @obj.stud_id
+                </td>
+                <td width="30%">
+                    @obj.course_id
+                </td>
+                <td width="30%">
+                    @obj.marks
+                </td>
+                <td width="30%">
+                    @obj.semester
+                </td>
+                <td width="30%">
+                    @obj.grade
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<a asp-controller="Student" asp-action="Index" class="btn btn-secondary" style="width:150px">
+    Back to List
+</a>

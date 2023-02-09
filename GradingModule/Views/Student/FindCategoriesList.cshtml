@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "FindCategoriesList";
+}
+
+<h1>Total Data With Each Category</h1>
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Student ID
+            </th>
+            <th>
+               Course ID
+            </th>
+            <th>
+                Category Name
+            </th>
+            <th>
+                Category Name Sequence
+            </th>
+            <th>
+                Obtain Marks
+            </th>
+            <th>
+                Total Marks
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width="50%">
+                    @obj.stud_id
+                </td>
+                <td width="30%">
+                    @obj.course_id
+                </td>
+                <td width="30%">
+                    @obj.CategoryName
+                </td>
+                <td width="30%">
+                    @obj.CategoryNameSequence
+                </td>
+                <td width="30%">
+                    @obj.marks
+                </td>
+                <td width="30%">
+                    @obj.TotalMarks
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<a asp-controller="Student" asp-action="Index" class="btn btn-secondary" style="width:150px">
+    Back to List
+</a>

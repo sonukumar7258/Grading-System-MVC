@@ -1,0 +1,45 @@
+﻿@model Category
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Please Put Updated Marks According To The Category Wise</h2>
+			<hr />
+		</div>
+		@*<div asp-validation-summary="All"></div>*@
+		<div class="mb-3">
+			<label asp-for="stud_id">Student ID</label>
+			<input asp-for="stud_id" class="form-control" />
+			<span asp-validation-for="stud_id" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="course_id">Course ID</label>
+			<input asp-for="course_id" class="form-control" />
+			<span asp-validation-for="course_id" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="CategoryName">Category Name</label>
+			<input asp-for="CategoryName" class="form-control" />
+			<span asp-validation-for="CategoryName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="CategoryNameSequence">Category Name Sequence(Like 1 or 0)</label>
+			<input asp-for="CategoryNameSequence" class="form-control" />
+			<span asp-validation-for="CategoryNameSequence" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="marks">Marks</label>
+			<input asp-for="marks" class="form-control" />
+			<span asp-validation-for="marks" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="TotalMarks">Total Marks</label>
+			<input asp-for="TotalMarks" class="form-control" />
+			<span asp-validation-for="TotalMarks" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+		<a asp-controller="Teacher" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
